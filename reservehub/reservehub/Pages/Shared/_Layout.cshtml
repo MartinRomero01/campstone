@@ -1,0 +1,181 @@
+﻿@{
+    // Lectura de variables de sesión
+    var rol = Context.Session.GetString("Rol") ?? "";
+    var nombre = Context.Session.GetString("Nombre") ?? "";
+    var isLogged = !string.IsNullOrEmpty(rol);
+    var esAdmin = rol == "Admin";
+    var esUsuario = rol == "Usuario";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ReserveHub</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/reservehub.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" asp-area="" asp-page="/Index">
+                    <i class="bi bi-calendar2-check-fill me-1"></i>ReserveHub
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <!-- MENÚ IZQUIERDO DE NAVEGACIÓN -->
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (esAdmin)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-semibold" asp-page="/Admin/Usuario/Index">
+                                    <i class="bi bi-people me-1"></i>Usuarios
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-semibold" asp-page="/Admin/Carreras/Index">
+                                    <i class="bi bi-journal-bookmark me-1"></i>Carreras
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-semibold" asp-page="/Admin/Correos/Index">
+                                    <i class="bi bi-envelope-at me-1"></i>Correo Masivo
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-semibold" asp-page="/Admin/Reservas/Index">
+                                    <i class="bi bi-calendar-check me-1"></i>Reservas
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-semibold" asp-page="/Admin/Ajustes/Index">
+                                    <i class="bi bi-gear me-1"></i>Ajustes
+                                </a>
+                            </li>
+                        }
+
+                        @if (esUsuario)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark fw-semibold" asp-page="/Usuario/MisReservas">
+                                    <i class="bi bi-calendar-event me-1"></i>Mis Reservas
+                                </a>
+                            </li>
+                        }
+                    </ul>
+
+                    <!-- MENÚ DERECHO (NOTIFICACIONES, PERFIL Y SALIDA) -->
+                    <ul class="navbar-nav ms-auto align-items-center">
+
+                        <!-- CAMPANA DE NOTIFICACIONES -->
+                        @if (esAdmin || esUsuario)
+                        {
+                            <li class="nav-item me-2">
+                                <partial name="_NotificacionesPartial" />
+                            </li>
+                        }
+
+                        <!-- SALUDO Y SESIÓN -->
+                        @if (isLogged)
+                        {
+                            <li class="nav-item d-flex align-items-center me-3">
+                                <span class="text-dark small">
+                                    Hola, <strong>@(string.IsNullOrEmpty(nombre) ? "Usuario" : nombre)</strong>
+                                    <span class="badge bg-secondary ms-1">@rol</span>
+                                </span>
+                            </li>
+
+                            <!-- CERRAR SESIÓN -->
+                            <li class="nav-item">
+                                <a class="nav-link text-danger fs-5 py-0" asp-page="/Login/Logout" title="Cerrar sesión">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                </a>
+                            </li>
+
+                            <!-- BOTÓN REFRESCAR -->
+                            <li class="nav-item ms-2">
+                                <button id="btnActualizar" class="btn btn-outline-primary btn-sm fw-bold" title="Refrescar contenido dinámico">
+                                    <i class="bi bi-arrow-clockwise"></i>
+                                </button>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="btn btn-primary btn-sm fw-bold" asp-page="/Login/Index">
+                                    <i class="bi bi-person-fill me-1"></i>Iniciar Sesión
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            &copy; 2026 - ReserveHub - Sistema de Reservas Online y Presencial - <a asp-area="" asp-page="/Privacy">Privacidad</a>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS BASE -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- SCRIPTS DINÁMICOS Y NOTIFICACIONES -->
+    <script>
+            function actualizarSecciones() {
+                const secciones = document.querySelectorAll("[data-dynamic='true']");
+                if (secciones.length === 0) return;
+                secciones.forEach(sec => {
+                    const url = sec.getAttribute("data-url");
+                    if (url) {
+                        fetch(url)
+                            .then(resp => resp.text())
+                            .then(html => sec.innerHTML = html)
+                            .catch(err => console.error("Error al actualizar sección:", err));
+                    }
+                });
+            }
+
+            document.getElementById("btnActualizar")?.addEventListener("click", actualizarSecciones);
+            setInterval(actualizarSecciones, 10000);
+    </script>
+
+    @if (esUsuario)
+    {
+        <!-- BOTÓN FLOTANTE DE CHAT DE SOPORTE PARA USUARIO -->
+        <a href="/Usuario/Ayuda/Index"
+           class="btn btn-primary rounded-circle shadow-lg d-flex justify-content-center align-items-center"
+           title="Chat con soporte"
+           style="position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007bff, #00b4d8);
+            color: white;
+            font-size: 28px;
+            z-index: 9999;
+            text-decoration: none;">
+            <i class="bi bi-headset"></i>
+        </a>
+    }
+
+    @await RenderSectionAsync("Scripts", required: false)</body>
+</html>

@@ -1,0 +1,63 @@
+﻿@page
+@model reservehub.Pages.Admin.Correos.IndexModel
+@{
+    ViewData["Title"] = "Envío de Correos Masivos";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2><i class="bi bi-envelope-paper-fill text-primary me-2"></i>Módulo de Correo Masivo</h2>
+            <p class="text-muted small mb-0">Envía notificaciones, avisos académicos o comunicados oficiales a los usuarios registrados.</p>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.MensajeExito))
+    {
+        <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>@Model.MensajeExito
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.MensajeError))
+    {
+        <div class="alert alert-danger alert-dismissible fade show shadow-sm" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>@Model.MensajeError
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold small text-secondary">Segmento de Destinatarios</label>
+                        <select asp-for="DestinatariosTipo" class="form-select">
+                            <option value="Todos">Todos los usuarios registrados</option>
+                            <option value="Alumnos">Solo Estudiantes / Usuarios (User)</option>
+                            <option value="Admin">Solo Administradores</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold small text-secondary">Asunto del Comunicado *</label>
+                        <input type="text" asp-for="Asunto" class="form-control" placeholder="Ej: Aviso importante sobre programación de aranceles" required />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold small text-secondary">Contenido del Mensaje *</label>
+                    <textarea asp-for="Mensaje" class="form-control" rows="6" placeholder="Escribe el mensaje institucional aquí..." required></textarea>
+                </div>
+
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="reset" class="btn btn-outline-secondary px-4">Limpiar</button>
+                    <button type="submit" asp-page-handler="Enviar" class="btn btn-primary fw-bold px-4 shadow-sm" onclick="return confirm('¿Estás seguro de enviar este correo masivo?');">
+                        <i class="bi bi-send-fill me-1"></i> Enviar Comunicado
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

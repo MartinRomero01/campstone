@@ -1,0 +1,24 @@
+﻿@page
+@model reservehub.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Panel de Administración";
+}
+
+@if (Model.Rol != "Admin")
+{
+    <div class="alert alert-danger mt-4">
+        <h4>Acceso Restringido</h4>
+        <p>No tienes permisos de administrador para acceder a esta vista.</p>
+    </div>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="p-4 bg-light rounded-3 border">
+            <h2>Bienvenido al Panel de Administración</h2>
+            <p class="lead">Desde aquí podrás gestionar usuarios, carreras, reservas y notificaciones masivas.</p>
+            <hr class="my-4">
+            <span class="badge bg-success fs-6">Módulo de Autenticación Conectado a la BD</span>
+        </div>
+    </div>
+}

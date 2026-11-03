@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Amaro\\source\\repos\\reservehub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|c:\\users\\amaro\\source\\repos\\reservehub\\reservehub\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|solutionrelative:reservehub\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|c:\\users\\amaro\\source\\repos\\reservehub\\reservehub\\pages\\admin\\correos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|solutionrelative:reservehub\\pages\\admin\\correos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|c:\\users\\amaro\\source\\repos\\reservehub\\reservehub\\pages\\admin\\correos\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|solutionrelative:reservehub\\pages\\admin\\correos\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|c:\\users\\amaro\\source\\repos\\reservehub\\reservehub\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|solutionrelative:reservehub\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|c:\\users\\amaro\\source\\repos\\reservehub\\reservehub\\data\\reservehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|solutionrelative:reservehub\\data\\reservehubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|c:\\users\\amaro\\source\\repos\\reservehub\\reservehub\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|solutionrelative:reservehub\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|c:\\users\\amaro\\source\\repos\\reservehub\\reservehub\\models\\chatmensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|solutionrelative:reservehub\\models\\chatmensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|c:\\users\\amaro\\source\\repos\\reservehub\\reservehub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3EF42173-DAFC-8199-A892-BB3E75785364}|reservehub\\reservehub.csproj|solutionrelative:reservehub\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "reservehub\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "reservehub\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T23:13:15.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "reservehub\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Pages\\Index.cshtml",
+              "RelativeToolTip": "reservehub\\Pages\\Index.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAowFYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T00:32:20.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Pages\\Admin\\Correos\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "reservehub\\Pages\\Admin\\Correos\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Pages\\Admin\\Correos\\Index.cshtml.cs",
+              "RelativeToolTip": "reservehub\\Pages\\Admin\\Correos\\Index.cshtml.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAowEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T00:26:23.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Pages\\Admin\\Correos\\Index.cshtml",
+              "RelativeDocumentMoniker": "reservehub\\Pages\\Admin\\Correos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Pages\\Admin\\Correos\\Index.cshtml",
+              "RelativeToolTip": "reservehub\\Pages\\Admin\\Correos\\Index.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAwD4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-14T00:26:19.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "reservehub\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Models\\Usuario.cs",
+              "RelativeToolTip": "reservehub\\Models\\Usuario.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwCgAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T00:22:03.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChatMensaje.cs",
+              "DocumentMoniker": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Models\\ChatMensaje.cs",
+              "RelativeDocumentMoniker": "reservehub\\Models\\ChatMensaje.cs",
+              "ToolTip": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Models\\ChatMensaje.cs",
+              "RelativeToolTip": "reservehub\\Models\\ChatMensaje.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T00:21:24.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\appsettings.json",
+              "RelativeDocumentMoniker": "reservehub\\appsettings.json",
+              "ToolTip": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\appsettings.json",
+              "RelativeToolTip": "reservehub\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-14T00:16:04.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReserveHubContext.cs",
+              "DocumentMoniker": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Data\\ReserveHubContext.cs",
+              "RelativeDocumentMoniker": "reservehub\\Data\\ReserveHubContext.cs",
+              "ToolTip": "C:\\Users\\Amaro\\source\\repos\\reservehub\\reservehub\\Data\\ReserveHubContext.cs",
+              "RelativeToolTip": "reservehub\\Data\\ReserveHubContext.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAwD0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T00:11:18.047Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
